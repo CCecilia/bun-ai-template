@@ -43,7 +43,6 @@ During the installation, the setup.sh script will guide you through:
 │   ├── gemini.ts
 │   └── ollama.ts
 ├── .env               # Created during setup (ignored by git)
-├── setup.sh           # Interactive setup logic
 ├── package.json
 └── tsconfig.json
 ```

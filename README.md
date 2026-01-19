@@ -18,7 +18,17 @@ A high-performance, **TypeScript-first** starter template for building AI-powere
 To create a new project using this template, simply run:
 
 ```bash
-bun create CCecilia/bun-ai-template my-ai-app
+bun create github.com/CCecilia/bun-ai-template my-ai-app
+```
+
+Or create a local version of the template
+
+```bash
+git clone git@github.com:CCecilia/bun-ai-template.git $HOME/.bun-create
+```
+
+```bash
+bun create bun-ai-template my-ai-app
 ```
 ---
 ## Setup Steps

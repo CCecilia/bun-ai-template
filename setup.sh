@@ -67,5 +67,26 @@ cp "templates/$provider.ts" "src/index.ts"
 # 5. Cleanup (Optional: removes the templates folder from the new project)
 rm -rf templates
 
+# 6. Update README.md
+echo "📝 Updating README.md..."
+# Extract name from package.json using grep and sed
+PROJECT_NAME=$(grep -m 1 '"name":' package.json | sed -E 's/.*"name": *"([^"]+)".*/\1/')
+
+# Overwrite README.md with new content
+cat <<EOF > README.md
+# $PROJECT_NAME
+
+This project was initialized with the **$provider** provider.
+
+## Getting Started
+
+1. Install dependencies: \`bun install\`
+2. Run the project: \`bun run src/index.ts\`
+
+---
+Created using [bun-ai-template](https://github.com/CCecilia/bun-ai-template)
+EOF
+
 echo "------------------------------------------"
-echo "🎉 Setup complete! Run 'bun run src/index.ts'"
+echo "🎉 Setup complete for $PROJECT_NAME!"
+echo "Run 'bun run src/index.ts' to start."
